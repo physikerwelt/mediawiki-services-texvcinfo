@@ -1,5 +1,7 @@
-# tests
+# texvcTokens
 [![Build Status][1]][2]
+
+Prints the texvvc tokens idetified by texvcjs.
 
 ## Installation
 
