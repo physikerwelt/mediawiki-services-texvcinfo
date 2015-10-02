@@ -15,6 +15,11 @@ Ensure everything works:
 ```
 npm test
 ```
+
+## Options
+
+--tree prints the tree structure
+
 ## License
 
 Copyright (c) 2015 Moritz Schubotz, C. Scott Ananian

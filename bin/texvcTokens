@@ -8,6 +8,7 @@ program
     .version(json.version)
     .usage('[options] <tex input>')
     .option('-v, --verbose', 'Show verbose error information')
+    .option('-t, --tree', 'Shows the whole tree.')
     .option('-D, --debug', 'Show stack trace on failure');
 
 
@@ -17,11 +18,11 @@ var input = program.args.join(' ');
 
 var tokens = require('../');
 
-var result = tokens.tokens(input, { debug: program.debug });
+var result = tokens.tokens(input, {debug: program.debug, tree: program.tree});
 
 // output result
 if (result.status === '+') {
-    console.log(result.status + (result.output || ''));
+    console.log(result.status + (JSON.stringify(result.output, null, 2) || ''));//
 } else if (result.status === 'F' || program.verbose) {
     console.log(result.status + (result.details || ''));
 } else {
