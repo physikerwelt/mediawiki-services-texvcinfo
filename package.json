@@ -1,6 +1,6 @@
 {
   "name": "texvc-tokens",
-  "version": "0.1.0-git",
+  "version": "0.1.0",
   "description": "A texvc tokenizer.",
   "main": "lib/index.js",
   "scripts": {
