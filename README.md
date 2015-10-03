@@ -1,4 +1,6 @@
 # texvcTokens
+[![npm version](https://badge.fury.io/js/texvc-tokens.svg)](http://badge.fury.io/js/texvc-tokens)
+
 [![Build Status][1]][2]
 
 Prints the texvvc tokens idetified by texvcjs.
