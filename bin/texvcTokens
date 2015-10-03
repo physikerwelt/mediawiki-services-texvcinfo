@@ -11,7 +11,8 @@ program
     .option('-t, --tree', 'Shows the whole tree.')
     .option('-D, --debug', 'Show stack trace on failure.')
     .option('-c, --compact', 'Do not pretty print output.')
-    .option('-j, --json', 'Outputs d3 json format.');
+    .option('-j, --json', 'Outputs d3 json format.')
+    .option('-f, --flat', 'Flattens the tree for elements with only one child ');
 
 
 program.parse(process.argv);
@@ -28,7 +29,7 @@ if ( program.json ){
     format = "json";
 }
 
-var result = tokens.tokens(input, {debug: program.debug, format: format});
+var result = tokens.tokens(input, {debug: program.debug, format: format, flatTree:program.flat});
 
 // output result
 if (result.status === undefined) {
