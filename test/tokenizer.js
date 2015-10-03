@@ -1,7 +1,7 @@
 "use strict";
 var assert = require('assert');
 var texvc = require("texvcjs");
-var lister = require('../lib/tokenLister');
+var lister = require('../lib/flatList');
 var testcases = [
     {in: '', out: []},
     {in: 'a', out: [['LITERAL', ''], ['TEX_ONLY', 'a']]},

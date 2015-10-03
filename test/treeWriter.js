@@ -1,7 +1,7 @@
 "use strict";
 var assert = require('assert');
 var texvc = require("texvcjs");
-var lister = require('../lib/tokenTreeWriter');
+var lister = require('../lib/arrayTree');
 var testcases = [
     {in: '', out: []},
     {

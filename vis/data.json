@@ -1,0 +1,31 @@
+{
+  "name": "root", "children": [{
+  "name": "UQ", "children": [{
+    "name": "LITERAL", "children": [{"name": "TEX_ONLY", "children": [{"name": "a"}]}]
+  }, {
+    "name": "CURLY", "children": [{
+      "name": "root", "children": [{
+        "name": "LITERAL", "children": [{
+          "name": "TEX_ONLY", "children": [{"name": "2"}]
+        }]
+      }]
+    }]
+  }]
+}, {
+  "name": "LITERAL", "children": [{
+    "name": "TEX_ONLY", "children": [{"name": "+"}]
+  }]
+}, {
+  "name": "UQ", "children": [{
+    "name": "LITERAL", "children": [{
+      "name": "TEX_ONLY", "children": [{"name": "b"}]
+    }]
+  }, {
+    "name": "CURLY", "children": [{
+      "name": "root", "children": [{
+        "name": "LITERAL", "children": [{"name": "TEX_ONLY", "children": [{"name": "2"}]}]
+      }]
+    }]
+  }]
+}]
+}
