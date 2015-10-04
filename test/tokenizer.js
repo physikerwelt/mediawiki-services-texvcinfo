@@ -24,7 +24,7 @@ var testcases = [
     }
 ];
 
-describe('Render', function () {
+describe('Tokens', function () {
     testcases.forEach(function (tc) {
         var input = tc.in;
         var output = tc.out;
