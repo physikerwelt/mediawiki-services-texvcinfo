@@ -23,7 +23,9 @@ var testcases = [
         "i","\\hbar","m","\\varepsilon_{k,l,m}","\\mathrm{j}_{m}","k","l","m","\\mathrm{x}","\\mathrm{y}","\\mathrm{z}"]
     },
     {in:"x = \\int_1^y {\\mathrm{d}t \\over t}",
-    out:["x","y","t","t"]}
+    out:["x","y","t","t"]},
+    {in:"f'(x) = \\lim_{h \\to 0}{f(x+h) - f(x)\\over{h}}",
+    out:["f'","x","h","f","x","h","f","x","h"]    }
 ];
 
 describe('Identifiers', function () {
