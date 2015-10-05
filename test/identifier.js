@@ -25,7 +25,11 @@ var testcases = [
     {in:"x = \\int_1^y {\\mathrm{d}t \\over t}",
     out:["x","y","t","t"]},
     {in:"f'(x) = \\lim_{h \\to 0}{f(x+h) - f(x)\\over{h}}",
-    out:["f'","x","h","f","x","h","f","x","h"]    }
+    out:["f'","x","h","f","x","h","f","x","h"],},
+    {
+    in: "\\dot m = C_d A \\sqrt{k \\rho_0 P_0 \\left(\\frac{2}{k + 1}\\right)^{\\frac{k + 1}{k - 1}}}",
+        out: ["\\dot{m}","C_{d}","A","k","\\rho_{0}","P_{0}","k","k","k"]
+    }
 ];
 
 describe('Identifiers', function () {
