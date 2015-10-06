@@ -18,10 +18,26 @@ Ensure everything works:
 npm test
 ```
 
-## Options
+## Usage
 
-- --tree prints the tree structure
-- --json prints d3 format (https://github.com/mbostock/d3/wiki/Tree-Layout)
+```
+  Usage: texvcinfo [options] <tex input>
+
+  Options:
+
+    -h, --help             output usage information
+    -V, --version          output the version number
+    -v, --verbose          Show verbose error information
+    -D, --debug            Show stack trace on failure.
+    -c, --compact          Do not pretty print output.
+    -f, --flat             Flattens the tree for elements with only one child
+    -o, --output [format]  Output the info in a specific format. Available options are:
+    "list": prints all tokens as list
+    "tree":prints the texvc AST
+    "json": a json object that can be visualized using d3
+    "identifier": prints TeX code for all identifiers
+    "all": is a combination of list, tree and identifier
+```
 
 ## Visuals
 To see the tree structure you can output the result to (vis/data.json).
@@ -32,6 +48,15 @@ If you want to see the texvc parse tree of the texvc expression $\frac12$ run
 .
 In the (/vis/index.html) is a 90° rotated version of the interactive Reingold–Tilford tree from
 http://bl.ocks.org/mbostock/4339083, that displays (vis/data.json).
+
+##Error codes
+Status is one character:
+
+- "+" : success! result is in 'output'
+- "E" : Lexer exception raised
+- "F" : TeX function not recognized
+- "S" : Parsing error
+- "-" : Generic/Default failure code. Might be an invalid argument, output file already exist, a problem with an external command ...
 
 ## License
 

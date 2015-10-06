@@ -8,39 +8,28 @@ program
     .version(json.version)
     .usage('[options] <tex input>')
     .option('-v, --verbose', 'Show verbose error information')
-    .option('-t, --tree', 'Shows the whole tree.')
     .option('-D, --debug', 'Show stack trace on failure.')
     .option('-c, --compact', 'Do not pretty print output.')
-    .option('-j, --json', 'Outputs d3 json format.')
     .option('-f, --flat', 'Flattens the tree for elements with only one child')
-    .option('-i, --identifier', 'Outputs a list of identifers')
-    .option('-a, --all', 'Returns and array with all information.');
+    .option('-o, --output [format]', 'Output the info in a specific format. Available options are:\n' +
+        '"list": prints all tokens as list\n' +
+        '"tree":prints the texvc AST\n' +
+        '"json": a json object that can be visualized using d3\n' +
+        '"identifier": prints TeX code for all identifiers\n' +
+        '"all": is a combination of list, tree and identifier', 'list');
 
 
 program.parse(process.argv);
 
 var input = program.args.join(' ');
 
-var tokens = require('../');
+var texvcinfo = require('../');
 
-var format = "list";
-if ( program.tree ){
-    format = "tree";
-}
-if ( program.json ){
-    format = "json";
-}
-if (program.identifier){
-    format = "identifier";
-}
-if (program.all){
-    format = "all";
-}
-var result = tokens.tokens(input, {debug: program.debug, format: format, flatTree:program.flat});
+var result = texvcinfo.texvcinfo(input, {debug: program.debug, format: program.output, flatTree: program.flat});
 
 // output result
 if (result.status === undefined) {
-    if ( program.compact) {
+    if (program.compact) {
         console.log(JSON.stringify(result));
     } else {
         console.log(JSON.stringify(result, null, 2));
@@ -48,6 +37,6 @@ if (result.status === undefined) {
 } else if (result.status === 'F' || program.verbose) {
     console.log(result.status + (result.details || ''));
 } else {
-    console.log(result.status+ (result.details || ''));
+    console.log(result.status + (result.details || ''));
 }
 process.exit(result.status === undefined ? 0 : 1);
