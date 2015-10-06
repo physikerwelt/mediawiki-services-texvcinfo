@@ -1,9 +1,9 @@
-# texvcTokens
-[![npm version](https://badge.fury.io/js/texvc-tokens.svg)](http://badge.fury.io/js/texvc-tokens)
+# texvcinfo
+[![npm version](https://badge.fury.io/js/texvcinfo.svg)](http://badge.fury.io/js/texvcinfo)
 
 [![Build Status][1]][2]
 
-Prints the texvvc tokens idetified by texvcjs.
+Prints the texvvc tokens identified by texvcjs.
 
 ## Installation
 
@@ -27,7 +27,7 @@ npm test
 To see the tree structure you can output the result to (vis/data.json).
 If you want to see the texvc parse tree of the texvc expression $\frac12$ run
 ```
-./bin/texvcTokens -j \\frac12 > ./vis/data.json
+./bin/texvcinfo -j \\frac12 > ./vis/data.json
 ```
 .
 In the (/vis/index.html) is a 90° rotated version of the interactive Reingold–Tilford tree from
@@ -40,5 +40,5 @@ Copyright (c) 2015 Moritz Schubotz, C. Scott Ananian
 Licensed under GPLv2.
 
 
-[1]: https://travis-ci.org/physikerwelt/texvcTokens.svg
-[2]: https://travis-ci.org/physikerwelt/texvcTokens
+[1]: https://travis-ci.org/physikerwelt/texvcinfo.svg
+[2]: https://travis-ci.org/physikerwelt/texvcinfo
