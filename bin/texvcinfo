@@ -12,8 +12,9 @@ program
     .option('-D, --debug', 'Show stack trace on failure.')
     .option('-c, --compact', 'Do not pretty print output.')
     .option('-j, --json', 'Outputs d3 json format.')
-    .option('-f, --flat', 'Flattens the tree for elements with only one child ')
-    .option('-i, --identifier', 'Outputs a list of identifers');
+    .option('-f, --flat', 'Flattens the tree for elements with only one child')
+    .option('-i, --identifier', 'Outputs a list of identifers')
+    .option('-a, --all', 'Returns and array with all information.');
 
 
 program.parse(process.argv);
@@ -32,7 +33,9 @@ if ( program.json ){
 if (program.identifier){
     format = "identifier";
 }
-
+if (program.all){
+    format = "all";
+}
 var result = tokens.tokens(input, {debug: program.debug, format: format, flatTree:program.flat});
 
 // output result
