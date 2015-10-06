@@ -1,7 +1,7 @@
 {
   "name": "texvcinfo",
-  "version": "0.2.1-git",
-  "description": "Information about texvc code.",
+  "version": "0.3.0",
+  "description": "Extracts information from texvc code.",
   "main": "lib/index.js",
   "scripts": {
     "test": "jshint . && mocha"
