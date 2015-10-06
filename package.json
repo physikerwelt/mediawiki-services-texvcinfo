@@ -1,6 +1,6 @@
 {
   "name": "texvcinfo",
-  "version": "0.3.1",
+  "version": "0.3.2-git",
   "description": "Extracts information from texvc code.",
   "main": "lib/index.js",
   "scripts": {
@@ -28,8 +28,7 @@
   },
   "devDependencies": {
     "jshint": "~2.5.2",
-    "mocha": "~2.0.1",
-    "pegjs": "~0.8.0"
+    "mocha": "~2.0.1"
   },
   "bin": {
     "texvcjs": "./bin/texvcinfo"
