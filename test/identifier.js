@@ -10,6 +10,7 @@ var testcases = [
     {in: 'a^{2}+b^{2}', out: ['a', 'b']},
     {in: '\\frac2b', out: ['b']},
     {in: 't_a', out: ['t_{a}']},
+    {in: '\\mathrm{kg}', out: ['\\mathrm{kg}']},
     {
         in: "\\hat{U}(t,t_0)=\\exp{\\left(-\\frac{i}\\hbar \\int_{t_0}^t \\hat{H}(t')dt'\\right)}",
         out: ['\\hat{U}', 't', 't_{0}', 'i', '\\hbar', 't_{0}', 't', '\\hat{H}', 't\'', 't\'']
@@ -25,7 +26,7 @@ var testcases = [
     {in:"x = \\int_1^y {\\mathrm{d}t \\over t}",
     out:["x","y","t","t"]},
     {in:"f'(x) = \\lim_{h \\to 0}{f(x+h) - f(x)\\over{h}}",
-    out:["f'","x","h","f","x","h","f","x","h"],},
+    out:["f'","x","h","f","x","h","f","x","h"]},
     {
     in: "\\dot m = C_d A \\sqrt{k \\rho_0 P_0 \\left(\\frac{2}{k + 1}\\right)^{\\frac{k + 1}{k - 1}}}",
         out: ["\\dot{m}","C_{d}","A","k","\\rho_{0}","P_{0}","k","k","k"]
