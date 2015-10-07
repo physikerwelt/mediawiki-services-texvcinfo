@@ -25,7 +25,7 @@ var input = program.args.join(' ');
 
 var texvcinfo = require('../');
 
-var result = texvcinfo.texvcinfo(input, {debug: program.debug, format: program.output, flatTree: program.flat});
+var result = texvcinfo.texvcinfo(input, {debug: program.debug, format: program.output, flatTree: program.flat,compact:program.compact});
 
 // output result
 if (result.status === undefined) {
