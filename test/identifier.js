@@ -40,8 +40,14 @@ var testcases = [
         in: "\\forall x \\Big(\\forall y (y \\in x \\rightarrow P[y]) \\rightarrow P[x]\\Big) \\rightarrow \\forall x \\, P[x]",
         out: ["x", "y", "y", "x", "P", "y", "P", "x", "x", "P", "x"]
     },
-    { in: "\\text{Magnetic Reynolds number  }",
-    out: []
+    {
+        in: "\\text{Magnetic Reynolds number  }",
+        out: []
+    },
+    {
+        in: "\\int_{R_n} \\cdots \\int_{R_2} \\int_{R_1} f(x_1, x_2, \\ldots, x_n)" +
+        " \\, dx_1 dx_2\\cdots dx_n \\equiv \\int_R f(\\boldsymbol{x}) \\, d^n\\boldsymbol{x}",
+        out: ['R_{n}', 'R_{2}', 'R_{1}', 'f', 'x_{1}', 'x_{2}', 'x_{n}', 'x_{1}', 'x_{2}', 'x_{n}', 'R', 'f', '\\boldsymbol{x}', 'n', '\\boldsymbol{x}']
     }
 ];
 
