@@ -39,6 +39,9 @@ var testcases = [
     {
         in: "\\forall x \\Big(\\forall y (y \\in x \\rightarrow P[y]) \\rightarrow P[x]\\Big) \\rightarrow \\forall x \\, P[x]",
         out: ["x", "y", "y", "x", "P", "y", "P", "x", "x", "P", "x"]
+    },
+    { in: "\\text{Magnetic Reynolds number  }",
+    out: []
     }
 ];
 
