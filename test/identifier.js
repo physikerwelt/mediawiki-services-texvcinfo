@@ -12,7 +12,8 @@ var testcases = [
     {in: 't_a', out: ['t_{a}']},
     {in: '\\mathrm{kg}', out: ['\\mathrm{kg}']},
     {in: '\\sqrt[3]{81}', out:[]},
-    //{in: 'a_{bc}', out: ['a_{bc}']},
+    {in: 'a_{bc}', out: ['a_{bc}']},
+    {in: 'a_{b,c}', out: ['a_{b,c}']},
     {
         in: "\\hat{U}(t,t_0)=\\exp{\\left(-\\frac{i}\\hbar \\int_{t_0}^t \\hat{H}(t')dt'\\right)}",
         out: ['\\hat{U}', 't', 't_{0}', 'i', '\\hbar', 't_{0}', 't', '\\hat{H}', 't\'', 't\'']
