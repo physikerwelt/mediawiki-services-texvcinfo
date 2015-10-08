@@ -4,7 +4,13 @@ var texvc = require("texvcjs");
 var lister = require('../lib/identifier');
 var testcases = [
     {in: '', out: []},
-    {in: 'a', out: ['a']},
+    {in: 'a'},
+    {in: 'a_{bc}'},
+    {in: 'a_{b,c}'},
+    {in: "\\mathrm{def}"},
+    {in: 'k_{\\mathbf{B}}',out:['k','\\mathbf{B}']},
+    {in: "\\boldsymbol{\\sigma}"},
+    {in: "\\mathbf{\\hat{n}}"},
     {in: 'a^2', out: ['a']},
     {in: 'a^2+b^2', out: ['a', 'b']},
     {in: 'a^{2}+b^{2}', out: ['a', 'b']},
@@ -12,8 +18,6 @@ var testcases = [
     {in: 't_a', out: ['t_{a}']},
     {in: '\\mathrm{kg}', out: ['\\mathrm{kg}']},
     {in: '\\sqrt[3]{81}', out:[]},
-    {in: 'a_{bc}', out: ['a_{bc}']},
-    {in: 'a_{b,c}', out: ['a_{b,c}']},
     {in: "a'_{k}", out: ['a\'','k']},
     {
         in: "\\hat{U}(t,t_0)=\\exp{\\left(-\\frac{i}\\hbar \\int_{t_0}^t \\hat{H}(t')dt'\\right)}",
@@ -61,7 +65,7 @@ var testcases = [
 describe('Identifiers', function () {
     testcases.forEach(function (tc) {
         var input = tc.in;
-        var output = tc.out;
+        var output = tc.out ||[tc.in];
         it('should be discovered ' + JSON.stringify(input), function () {
             assert.deepEqual(lister(texvc.parse(input)), output);
         });
