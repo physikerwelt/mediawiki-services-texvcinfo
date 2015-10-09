@@ -7,7 +7,7 @@ var testcases = [
     {in: 'a'},
     {in: 'a_{bc}'},
     {in: 'a_{b,c}'},
-    {in: 'a_{b+c}', out:['a','b','c']},
+    {in: 'a_{b\\pm c}', out:['a','b','c']},
     {in: "\\mathrm{def}"},
     {in: 'k_{\\mathbf{B}}',out:['k_{\\mathbf{B}}']},
     {in: "\\boldsymbol{\\sigma}"},
@@ -20,6 +20,7 @@ var testcases = [
     {in: '\\mathrm{kg}', out: ['\\mathrm{kg}']},
     {in: '\\sqrt[3]{81}', out:[]},
     {in: "a'_{k}", out: ['a\'','k']},
+    {in: "x_n*x_{n-1}", out: ['x_{n}','x_{n-1}']},
     {in: "\\underbrace{x+y}_2",out:['x','y']},
     {
         in: "\\hat{U}(t,t_0)=\\exp{\\left(-\\frac{i}\\hbar \\int_{t_0}^t \\hat{H}(t')dt'\\right)}",
