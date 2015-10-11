@@ -7,9 +7,9 @@ var testcases = [
     {in: 'a'},
     {in: 'a_{bc}'},
     {in: 'a_{b,c}'},
-    {in: 'a_{b\\pm c}', out:['a','b','c']},
+    {in: 'a_{b\\pm c}', out: ['a', 'b', 'c']},
     {in: "\\mathrm{def}"},
-    {in: 'k_{\\mathbf{B}}',out:['k_{\\mathbf{B}}']},
+    {in: 'k_{\\mathbf{B}}', out: ['k_{\\mathbf{B}}']},
     {in: "\\boldsymbol{\\sigma}"},
     {in: "\\mathbf{\\hat{n}}"},
     {in: 'a^2', out: ['a']},
@@ -18,11 +18,12 @@ var testcases = [
     {in: '\\frac2b', out: ['b']},
     {in: 't_a', out: ['t_{a}']},
     {in: '\\mathrm{kg}', out: ['\\mathrm{kg}']},
-    {in: '\\sqrt[3]{81}', out:[]},
-    {in: "a'_{k}", out: ['a\'','k']},
-    {in: "x_n*x_{n-1}", out: ['x_{n}','x_{n-1}']},
+    {in: '\\sqrt[3]{81}', out: []},
+    {in: "a'_{k}", out: ['a\'', 'k']},
+    {in: "x_n*x_{n-1}", out: ['x_{n}', 'x_{n-1}']},
     {in: 'a_{i_{j}}'},
-    {in: "\\underbrace{x+y}_2",out:['x','y']},
+    {in: '\\operatorname{arg min}', out: ['\\operatorname{argmin}']},
+    {in: "\\underbrace{x+y}_2", out: ['x', 'y']},
     {
         in: "\\hat{U}(t,t_0)=\\exp{\\left(-\\frac{i}\\hbar \\int_{t_0}^t \\hat{H}(t')dt'\\right)}",
         out: ['\\hat{U}', 't', 't_{0}', 'i', '\\hbar', 't_{0}', 't', '\\hat{H}', 't\'', 't\'']
@@ -62,8 +63,11 @@ var testcases = [
         out: ['R_{n}', 'R_{2}', 'R_{1}', 'f', 'x_{1}', 'x_{2}', 'x_{n}',
             'x_{1}', 'x_{2}', 'x_{n}', 'R', 'f', '\\boldsymbol{x}', 'n', '\\boldsymbol{x}']
     },
-    {    in: "\\mathbf{M}_{\\rm orb}", out:['\\mathbf{M}_{\\mathrm{orb}}']},
-    {in:"F=\\overline{(A \\wedge B) \\vee (C \\wedge D)}", out:['F','A','B','C','D']}
+    {in: "\\mathbf{M}_{\\rm orb}", out: ['\\mathbf{M}_{\\mathrm{orb}}']},
+    {in: "F=\\overline{(A \\wedge B) \\vee (C \\wedge D)}", out: ['F', 'A', 'B', 'C', 'D']},
+    {
+        in: "\\mathrm{2\\ Squares\\ of\\ Land}"
+    }
     //{in: "\\reals", out:["\\reals"]},
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
 ];
@@ -71,7 +75,7 @@ var testcases = [
 describe('Identifiers', function () {
     testcases.forEach(function (tc) {
         var input = tc.in;
-        var output = tc.out ||[tc.in];
+        var output = tc.out || [tc.in];
         it('should be discovered ' + JSON.stringify(input), function () {
             assert.deepEqual(lister(texvc.parse(input)), output);
         });
