@@ -60,7 +60,8 @@ var testcases = [
         " \\, dx_1 dx_2\\cdots dx_n \\equiv \\int_R f(\\boldsymbol{x}) \\, d^n\\boldsymbol{x}",
         out: ['R_{n}', 'R_{2}', 'R_{1}', 'f', 'x_{1}', 'x_{2}', 'x_{n}',
             'x_{1}', 'x_{2}', 'x_{n}', 'R', 'f', '\\boldsymbol{x}', 'n', '\\boldsymbol{x}']
-    }
+    },
+    {    in: "\\mathbf{M}_{\\rm orb}", out:['\\mathbf{M}_{\\mathrm{orb}}']}
     //{in: "\\reals", out:["\\reals"]},
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
 ];
