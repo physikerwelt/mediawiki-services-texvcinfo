@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "commander": "~2.3.0",
-    "texvcjs": "~0.3.1"
+    "texvcjs": "git+https://github.com/wikimedia/texvcjs"
   },
   "devDependencies": {
     "jshint": "~2.5.2",
