@@ -13,7 +13,7 @@ program
     .option('-f, --flat', 'Flattens the tree for elements with only one child')
     .option('-o, --output [format]', 'Output the info in a specific format. Available options are:\n' +
         '"list": prints all tokens as list\n' +
-        '"tree":prints the texvc AST\n' +
+        '"tree": prints the texvc AST\n' +
         '"json": a json object that can be visualized using d3\n' +
         '"identifier": prints TeX code for all identifiers\n' +
         '"all": is a combination of list, tree and identifier', 'list');
@@ -25,7 +25,7 @@ var input = program.args.join(' ');
 
 var texvcinfo = require('../');
 
-var result = texvcinfo.texvcinfo(input, {debug: program.debug, format: program.output, flatTree: program.flat,compact:program.compact});
+var result = texvcinfo.texvcinfo(input, {debug: program.debug, format: program.output, flatTree: program.flat, compact:program.compact});
 
 // output result
 if (result.status === undefined) {

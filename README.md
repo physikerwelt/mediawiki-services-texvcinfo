@@ -33,7 +33,7 @@ npm test
     -f, --flat             Flattens the tree for elements with only one child
     -o, --output [format]  Output the info in a specific format. Available options are:
     "list": prints all tokens as list
-    "tree":prints the texvc AST
+    "tree": prints the texvc AST
     "json": a json object that can be visualized using d3
     "identifier": prints TeX code for all identifiers
     "all": is a combination of list, tree and identifier
