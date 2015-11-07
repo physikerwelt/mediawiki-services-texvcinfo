@@ -37,6 +37,7 @@ npm test
     "json": a json object that can be visualized using d3
     "identifier": prints TeX code for all identifiers
     "all": is a combination of list, tree and identifier
+    "feedback": returns data to generate user feedback in a ui
 ```
 
 ## Visuals
