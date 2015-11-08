@@ -7,6 +7,7 @@ var testcases = [
         out: {
             "checked": "",
             "identifiers": [],
+            requiredPackages: [],
             "success": true
         }
     },
@@ -17,6 +18,7 @@ var testcases = [
             "identifiers": [
                 "\\mathbb{x}"
             ],
+            requiredPackages: [ 'ams' ],
             "success": true
         }
     },
