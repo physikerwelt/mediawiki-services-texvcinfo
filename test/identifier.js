@@ -7,6 +7,8 @@ var testcases = [
     {in: 'a'},
     {in: 'a_{bc}'},
     {in: 'a_{b,c}'},
+    {in: 'a_{+}'},
+    {in: 'a_{-\\infty}'},
     {in: 'a_{b\\pm c}', out: ['a', 'b', 'c']},
     {in: "\\mathrm{def}"},
     {in: 'k_{\\mathbf{B}}', out: ['k_{\\mathbf{B}}']},
