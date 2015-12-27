@@ -8,7 +8,8 @@ var testcases = [
             "checked": "",
             "identifiers": [],
             requiredPackages: [],
-            "success": true
+            "success": true,
+            endsWithDot:false
         }
     },
     {
@@ -17,6 +18,17 @@ var testcases = [
             "checked": "{\\cos(x).}",
             "identifiers": ['x'],
             requiredPackages: [],
+            endsWithDot:true,
+            "success": true
+        }
+    },
+    {
+        input: '{\\cos\\left(x.\\right)}',
+        out: {
+            "checked": "{\\cos \\left(x.\\right)}",
+            "identifiers": ['x'],
+            requiredPackages: [],
+            endsWithDot:false,
             "success": true
         }
     },
@@ -28,7 +40,8 @@ var testcases = [
                 "\\mathbb{x}"
             ],
             requiredPackages: [ 'ams' ],
-            "success": true
+            "success": true,
+            endsWithDot:false
         }
     },
     {
