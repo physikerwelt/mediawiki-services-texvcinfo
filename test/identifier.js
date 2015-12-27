@@ -26,7 +26,7 @@ var testcases = [
     {in: "\\underbrace{x+y}_2", out: ['x', 'y']},
     {
         in: "\\hat{U}(t,t_0)=\\exp{\\left(-\\frac{i}\\hbar \\int_{t_0}^t \\hat{H}(t')dt'\\right)}",
-        out: ['\\hat{U}', 't', 't_{0}', 'i', '\\hbar', 't_{0}', 't', '\\hat{H}', 't\'', 't\'']
+        out: ['\\hat{U}', 't', 't_{0}', 'i', 't_{0}', 't', '\\hat{H}', 't\'', 't\'']
     },
     {
         in: "\\begin{align}\n  &[\\mathrm j_k, \\mathrm j_l]\n" +
@@ -35,7 +35,7 @@ var testcases = [
         "    & k, l, m &\\in \\{\\mathrm x, \\mathrm y, \\mathrm z\\}\n" +
         "\\end{align}",
         out: ["\\mathrm{j}_{k}", "\\mathrm{j}_{l}", "\\mathrm{j}_{k}", "\\mathrm{j}_{l}", "\\mathrm{j}_{l}", "\\mathrm{j}_{k}",
-            "i", "\\hbar", "m", "\\varepsilon_{k,l,m}", "\\mathrm{j}_{m}", "k", "l", "m", "\\mathrm{x}", "\\mathrm{y}", "\\mathrm{z}"]
+            "i", "m", "\\varepsilon_{k,l,m}", "\\mathrm{j}_{m}", "k", "l", "m", "\\mathrm{x}", "\\mathrm{y}", "\\mathrm{z}"]
     },
     {
         in: "x = \\int_1^y {\\mathrm{d}t \\over t}",
