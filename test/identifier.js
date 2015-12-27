@@ -4,7 +4,9 @@ var texvc = require("texvcjs");
 var lister = require('../lib/identifier');
 var testcases = [
     {in: '', out: []},
+    {in: '.', out: []},
     {in: 'a'},
+    {in: 'a.', out: ['a']},
     {in: 'a_{bc}'},
     {in: 'a_{b,c}'},
     {in: 'a_{+}'},

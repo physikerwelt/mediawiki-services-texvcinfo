@@ -12,6 +12,15 @@ var testcases = [
         }
     },
     {
+        input: '{\\cos(x).}',
+        out: {
+            "checked": "{\\cos(x).}",
+            "identifiers": ['x'],
+            requiredPackages: [],
+            "success": true
+        }
+    },
+    {
         input: '\\mathbb{x}',
         out: {
             "checked": "\\mathbb {x} ",
