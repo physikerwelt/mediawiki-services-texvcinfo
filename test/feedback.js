@@ -181,7 +181,7 @@ var testcases = [
                 "name": "SyntaxError"
             },
             "success": false
-        },
+        }
     },
     {
         input: '\\ce{H2O}',

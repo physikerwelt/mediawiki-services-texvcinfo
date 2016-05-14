@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jshint . && mocha",
     "coverage": "istanbul cover _mocha -- -R spec",
-    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls",
+    "coverage-win": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
   },
   "repository": {
     "type": "git",

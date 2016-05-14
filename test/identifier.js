@@ -74,6 +74,18 @@ var testcases = [
     {in: "F=\\overline{(A \\wedge B) \\vee (C \\wedge D)}", out: ['F', 'A', 'B', 'C', 'D']},
     {
         in: "\\mathrm{2\\ Squares\\ of\\ Land}"
+    },
+    {
+        in: "\\mathrm{d_k,d^k,d_{klo},\\left(d_{\\begin{matrix}a\\end{matrix}}\\right),\\frac12}",
+        out: ['d_{k}', 'd', 'k', 'd_{klo}', 'd', 'a']
+    },
+    {
+        in: "\\mathrm{\\begin{matrix}a\\end{matrix},\\big(,\\mbox{A},{\\rm b},1_2_3,1^2,1^2^3,1_2^3,_1^2}",
+        out: ['a','b']
+    },
+    {
+        in: "\\mathrm{a \\choose b, \\sqrt{4}, 1}",
+        out: ['a','b']
     }
     //{in: "\\reals", out:["\\reals"]},
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
