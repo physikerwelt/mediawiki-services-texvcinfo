@@ -86,6 +86,10 @@ var testcases = [
     {
         in: "\\mathrm{a \\choose b, \\sqrt{4}, 1}",
         out: ['a','b']
+    },
+    {
+        in: "\\sideset{c}{d}e",
+        out: ['c','d','e']
     }
     //{in: "\\reals", out:["\\reals"]},
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
