@@ -1,7 +1,7 @@
 "use strict";
 var assert = require('assert');
 var texvc = require("texvcjs");
-var lister = require('../lib/identifier');
+var lister = require('../lib/identifier').render;
 var testcases = [
     {in: '', out: []},
     {in: '.', out: []},
