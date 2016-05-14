@@ -4,7 +4,9 @@
   "description": "Extracts information from texvc code.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jshint . && mocha"
+    "test": "jshint . && mocha",
+    "coverage": "istanbul cover _mocha -- -R spec",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -27,8 +29,11 @@
     "texvcjs": "git+https://github.com/wikimedia/texvcjs.git"
   },
   "devDependencies": {
-    "jshint": "~2.9.1",
-    "mocha": "~2.4.1"
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.2",
+    "jshint": "^2.9.1",
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.2.0"
   },
   "bin": {
     "texvcjs": "./bin/texvcinfo"
