@@ -4,7 +4,8 @@ var texvc = require("texvcjs");
 var lister = require('../lib/d3json');
 var testcases = [
     {in: '', out: {name: "root", children: []}},
-    {in: 'a',
+    {
+        in: 'a',
         out: {
             name: "root",
             children: [{"name": "LITERAL", "children": [{"name": "TEX_ONLY", "children": [{name: "a"}]}]}]
