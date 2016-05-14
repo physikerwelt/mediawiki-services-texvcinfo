@@ -3,6 +3,8 @@
 
 [![Build Status][1]][2]
 
+[![Coverage Status](https://coveralls.io/repos/github/physikerwelt/texvcinfo/badge.svg?branch=master)](https://coveralls.io/github/physikerwelt/texvcinfo?branch=master)
+
 Prints the texvvc tokens identified by texvcjs.
 
 ## Installation
