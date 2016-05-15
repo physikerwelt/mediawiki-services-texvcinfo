@@ -106,6 +106,42 @@ var testcases = [
     }    , {
         in: "\\mathrm{'_c}",
         out: ['c']
+    },
+    {
+        in: "0_{d_k,d^k,d_{klo},\\left(d_{\\begin{matrix}a\\end{matrix}}\\right),\\frac12}",
+        out: ['d_{k}', 'd', 'k', 'd_{klo}', 'd', 'a']
+    },
+    {
+        in: "0_{\\begin{matrix}a\\end{matrix},\\big(,\\mbox{A},{\\rm b},1_2_3,1^2,1^2^3,1_2^3,_1^2}",
+        out: ['a', 'b']
+    },
+    {
+        in: "0_{a \\choose b, \\sqrt{4}}",
+        out: ['a', 'b']
+    },{
+        in: "0_{_a^b}", //FQN
+        out: ['a', 'b']
+    }, {
+        in: "0_{\\sqrt[3]{81}}", //FUN2sq
+        out: []
+    }, {
+        in: "0_{\\sideset{c}{d}e}", //FUN2nb
+        out: ['c', 'd', 'e']
+    },  {
+        in: "0_{{}_c}",
+        out: ['c']
+    }, {
+        in:"0_{\\it a}",
+        out: ['a']
+    }, {
+        in:"0_{\\cal a}",
+        out: ['a']
+    }, {
+        in:"0_{\\bf a}",
+        out: ['a']
+    }, {
+        in:"0_{\\bf }",
+        out: []
     }
     //{in: "\\reals", out:["\\reals"]},
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
