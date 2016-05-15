@@ -100,6 +100,12 @@ var testcases = [
     }, {
         in: "\\mathrm{\\sideset{c}{d}e}", //FUN2nb
         out: ['c', 'd', 'e']
+    }, {
+        in: "\\mathrm{{}_c}",
+        out: ['c']
+    }    , {
+        in: "\\mathrm{'_c}",
+        out: ['c']
     }
     //{in: "\\reals", out:["\\reals"]},
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
