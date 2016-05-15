@@ -85,15 +85,33 @@ var testcases = [
                     {"name": "LITERAL", "children": [{"name": "TEX_ONLY", "children": [{"name": "b"}]}]}]
             }]
         }
+    },
+    {
+        in: 'b^2',
+        flat: true,
+        out: {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "name": "LITERAL->TEX_ONLY->b"
+                        },
+                        {
+                            "name": "LITERAL->TEX_ONLY->2"
+                        }
+                    ],
+                    "name": "UQ"
+                }
+            ],
+            "name": "root"
+        }
     }
 ];
 
 describe('tree2d3json', function () {
     testcases.forEach(function (tc) {
-        var input = tc.in;
-        var output = tc.out;
-        it('should correctly render ' + JSON.stringify(input), function () {
-            assert.deepEqual(lister(texvc.parse(input)), output);
+        it('should correctly render ' + JSON.stringify(tc.in), function () {
+            assert.deepEqual(lister(texvc.parse(tc.in), tc.flat), tc.out);
         });
     });
 });
