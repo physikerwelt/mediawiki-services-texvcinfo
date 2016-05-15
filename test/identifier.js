@@ -81,15 +81,15 @@ var testcases = [
     },
     {
         in: "\\mathrm{\\begin{matrix}a\\end{matrix},\\big(,\\mbox{A},{\\rm b},1_2_3,1^2,1^2^3,1_2^3,_1^2}",
-        out: ['a','b']
+        out: ['a', 'b']
     },
     {
-        in: "\\mathrm{a \\choose b, \\sqrt{4}, 1}",
-        out: ['a','b']
+        in: "\\mathrm{a \\choose b, \\sqrt{4}, \\sqrt[3]{81}, \\sideset{c}{d}e}",
+        out: ['a', 'b', 'c', 'd', 'e']
     },
     {
-        in: "\\sideset{c}{d}e",
-        out: ['c','d','e']
+        in: "\\sideset{c}{d}e+\\sideset{_\\dagger^*}{_\\dagger^*}\\prod",
+        out: ['c', 'd', 'e']
     }
     //{in: "\\reals", out:["\\reals"]},
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
