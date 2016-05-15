@@ -1,5 +1,6 @@
 "use strict";
 var assert = require('assert');
+var ast = require('texvcjs').ast;
 var texvc = require("texvcjs");
 var lister = require('../lib/identifier').render;
 var testcases = [
@@ -102,5 +103,8 @@ describe('Identifiers', function () {
         it('should be discovered ' + JSON.stringify(input), function () {
             assert.deepEqual(lister(texvc.parse(input)), output);
         });
+    });
+    it('texonly should not cause an error', function () {
+        assert.deepEqual(lister(ast.RenderT.TEX_ONLY('a')), []);
     });
 });
