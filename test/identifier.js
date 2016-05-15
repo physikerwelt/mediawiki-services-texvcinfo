@@ -85,11 +85,20 @@ var testcases = [
         out: ['a', 'b']
     },
     {
-        in: "\\mathrm{a \\choose b, \\sqrt{4}, \\sqrt[3]{81}, \\sideset{c}{d}e}",
-        out: ['a', 'b', 'c', 'd', 'e']
+        in: "\\mathrm{a \\choose b, \\sqrt{4}}",
+        out: ['a', 'b']
     },
     {
         in: "\\sideset{c}{d}e+\\sideset{_\\dagger^*}{_\\dagger^*}\\prod",
+        out: ['c', 'd', 'e']
+    }, {
+        in: "\\mathrm{_a^b}", //FQN
+        out: ['a', 'b']
+    }, {
+        in: "\\mathrm{\\sqrt[3]{81}}", //FUN2sq
+        out: []
+    }, {
+        in: "\\mathrm{\\sideset{c}{d}e}", //FUN2nb
         out: ['c', 'd', 'e']
     }
     //{in: "\\reals", out:["\\reals"]},
