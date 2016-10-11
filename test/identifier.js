@@ -15,7 +15,7 @@ var testcases = [
     {in: 'a_{\\emptyset}'},
     {in: 'a_{-\\infty}'},
     {in: 'a_b^c', out: ['a', 'b', 'c']},
-    {in: '\\int_0^\\infty', out: ['\\infty']},
+    {in: '\\int_0^\\infty', out: []},
     {in: 'a_{b\\pm c}', out: ['a', 'b', 'c']},
     {in: "\\mathrm{def}"},
     {in: 'k_{\\mathbf{B}}', out: ['k_{\\mathbf{B}}']},
