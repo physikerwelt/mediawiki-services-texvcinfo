@@ -484,7 +484,7 @@ var extractions = [
     }, {
         "fn": [],
         "fp": [],
-        "identifier": ["Y", "\\beta", "I", "T_{8}", "X"],
+        "identifier": ["Y", "\\beta", "T_{8}", "I", "X"],
         "math_inputtex": "Y = \\beta T_8 + I X",
         "qID": "48",
         "tp": ["Y", "\\beta", "I", "T_{8}", "X"]
@@ -652,7 +652,7 @@ var extractions = [
     }, {
         "fn": [],
         "fp": [],
-        "identifier": ["k", "K", "T", "M", "a"],
+        "identifier": ["K", "M", "k", "T", "a"],
         "math_inputtex": " K^M_*(k) := T^*(k^\\times)/(a\\otimes (1-a)) ",
         "qID": "72",
         "tp": ["k", "K", "T", "M", "a"]
