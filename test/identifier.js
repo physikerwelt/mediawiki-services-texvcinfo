@@ -151,7 +151,6 @@ var testcases = [
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
 ];
 
-
 describe('Identifiers', function () {
     testcases.forEach(function (tc) {
         var input = tc.in;
@@ -164,5 +163,3 @@ describe('Identifiers', function () {
         assert.deepEqual(lister(ast.RenderT.TEX_ONLY('a')), []);
     });
 });
-
-
