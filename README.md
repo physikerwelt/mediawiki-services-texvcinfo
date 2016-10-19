@@ -67,6 +67,13 @@ Status is one character:
 - "S" : Parsing error
 - "-" : Generic/Default failure code. Might be an invalid argument, output file already exist, a problem with an external command ...
 
+## Implementation Details on Identifier extraction
+
+This section provides details on the implementation of the identifier extraction of texvcinfo.
+
+The identifier extraction is based on the [texvc](https://github.com/wikimedia/texvcjs) AST of the input TeX string. The main component is the [extractIdentifiers](lib/identifier.js#L79) visitor, which is supported by the [extractSubscipts](lib/extractors/subscripts.js#L77) and the [getModIdent](lib/extractors/mods.js#L20) visitor. Those visitors extend the functionality of the ast objects and define new methods to transform ast. Note, that [parsed texvc input](lib/index.js#L22) might be an array or a simple string rather than an ast object. Therefore, the [identifier extractor](lib/identifier.js#L47) differentiates between those three cases.
+
+
 ## License
 
 Copyright (c) 2015 Moritz Schubotz, C. Scott Ananian
