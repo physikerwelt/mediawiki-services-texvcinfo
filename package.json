@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "commander": "~2.9.0",
-    "texvcjs": "git+https://github.com/wikimedia/texvcjs.git"
+    "mathoid-texvcjs": "^0.3.2"
   },
   "devDependencies": {
     "coveralls": "^2.11.9",
