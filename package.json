@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "commander": "~2.9.0",
-    "mathoid-texvcjs": "^0.3.2"
+    "mathoid-texvcjs": "git+ssh://git@github.com:physikerwelt/texvcjs.git#585c93f11aaebf2d7cb5e8e9b6420e8f3e95d561"
   },
   "devDependencies": {
     "coveralls": "^2.11.9",
