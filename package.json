@@ -1,6 +1,6 @@
 {
   "name": "texvcinfo",
-  "version": "0.4.5",
+  "version": "0.5.0-alpha1",
   "description": "Extracts information from texvc code.",
   "main": "lib/index.js",
   "scripts": {
