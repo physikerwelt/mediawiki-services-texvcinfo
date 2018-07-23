@@ -47,44 +47,44 @@ var testcases = [
     {
         input: 'a+\\badfunc-b',
         out: {
-          "column": 3,
-          "details": "\\badfunc",
-          "error": {
-            "expected": [],
-            "found": "\\badfunc",
-            "location": {
-              "end": {
-                "column": 11,
-                "line": 1,
-                "offset": 10
-              },
-              "start": {
-                "column": 3,
-                "line": 1,
-                "offset": 2
-              }
+            "column": 3,
+            "details": "\\badfunc",
+            "error": {
+                "expected": [],
+                "found": "\\badfunc",
+                "location": {
+                    "end": {
+                        "column": 11,
+                        "line": 1,
+                        "offset": 10
+                    },
+                    "start": {
+                        "column": 3,
+                        "line": 1,
+                        "offset": 2
+                    }
+                },
+                "message": "Illegal TeX function",
+                "name": "SyntaxError"
             },
-            "message": "Illegal TeX function",
-            "name": "SyntaxError"
-          },
-          "line": 1,
-          "offset": 2,
-          "status": "F",
-          "success": false,
-          "warnings": []
+            "line": 1,
+            "offset": 2,
+            "status": "F",
+            "success": false,
+            "warnings": []
         }
     },
     {
         input: '\\sin\\left(x)',
         out: {
-          "line": 1,
-          "offset": 12,
-          "status": "S",
-          "success": false,
-          "warnings": [],
-          "column": 13,
-          "details": "SyntaxError: Expected \"-\", \"[\", \"\\\\\", \"\\\\begin\", \"\\\\begin{\", \"]\", \"^\", \"_\", \"{\", [ \\t\\n\\r], [%$], [().], [,:;?!'], [/|], [0-9], [><~], [\\-+*=], or [a-zA-Z] but end of input found.",
-          "error": {
+            "line": 1,
+            "offset": 12,
+            "status": "S",
+            "success": false,
+            "warnings": [],
+            "column": 13,
+            "details": "SyntaxError: Expected \"-\", \"[\", \"\\\\\", \"\\\\begin\", \"\\\\begin{\", \"]\", \"^\", \"_\", \"{\", [ \\t\\n\\r], [%$], [().], [,:;?!'], [/|], [0-9], [><~], [\\-+*=], or [a-zA-Z] but end of input found.",
+            "error": {
                 "message": "Expected \"-\", \"[\", \"\\\\\", \"\\\\begin\", \"\\\\begin{\", \"]\", \"^\", \"_\", \"{\", [ \\t\\n\\r], [%$], [().], [,:;?!'], [/|], [0-9], [><~], [\\-+*=], or [a-zA-Z] but end of input found.",
                 "expected": [
                     {
@@ -283,6 +283,67 @@ var testcases = [
                 "status": "C"
             },
             "success": false
+        }
+    },
+    {
+        input: '\\ce {\\log}',
+        options: {usemhchem: true},
+        out: {
+            "checked": "{\\ce {\\log }}",
+            "endsWithDot": false,
+            "identifiers": [],
+            "requiredPackages": [
+                "mhchem"
+            ],
+            "success": true,
+            "warnings": [
+                {
+                    "details": {
+                        "column": 10,
+                        "details": "SyntaxError: Expected [a-zA-Z] but \"}\" found.",
+                        "error": {
+                            "expected": [
+                                {
+                                    "ignoreCase": false,
+                                    "inverted": false,
+                                    "parts": [
+                                        [
+                                            "a",
+                                            "z"
+                                        ],
+                                        [
+                                            "A",
+                                            "Z"
+                                        ],
+                                    ],
+                                    "type": "class",
+                                }
+                            ],
+                            "found": "}",
+                            "location": {
+                                "end": {
+                                    "column": 11,
+                                    "line": 1,
+                                    "offset": 10,
+                                },
+                                "start": {
+                                    "column": 10,
+                                    "line": 1,
+                                    "offset": 9,
+                                },
+                            },
+                            "message": "Expected [a-zA-Z] but \"}\" found.",
+                            "name": "SyntaxError",
+                        },
+                        "line": 1,
+                        "offset": 9,
+                        "status": "S",
+                        "success": false,
+                        "warnings": [],
+                    },
+                    "type": "mhchem-deprecation"
+                }
+            ]
         }
     }
 ];
