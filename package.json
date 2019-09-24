@@ -1,6 +1,6 @@
 {
   "name": "texvcinfo",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Extracts information from texvc code.",
   "main": "lib/index.js",
   "scripts": {
@@ -26,16 +26,16 @@
     "url": "https://github.com/physikerwelt/texvcinfo/issues"
   },
   "dependencies": {
-    "commander": "^2.11.0",
-    "mathoid-texvcjs": "^0.3.6"
+    "commander": "^3.0.1",
+    "mathoid-texvcjs": "^0.3.7"
   },
   "devDependencies": {
-    "coveralls": "^2.11.9",
-    "eslint": "^4.6.1",
-    "istanbul": "^0.4.2",
-    "jshint": "^2.9.1",
-    "mocha": "^3.1.1",
-    "mocha-lcov-reporter": "^1.2.0"
+    "coveralls": "^3.0.6",
+    "eslint": "^6.4.0",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.10.2",
+    "mocha": "^6.2.0",
+    "mocha-lcov-reporter": "^1.3.0"
   },
   "bin": {
     "texvcinfo": "./bin/texvcinfo"
