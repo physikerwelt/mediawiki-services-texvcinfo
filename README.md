@@ -2,7 +2,6 @@
 [![npm version](https://badge.fury.io/js/texvcinfo.svg)](http://badge.fury.io/js/texvcinfo)
 [![Build Status][1]][2]
 [![Coverage Status](https://coveralls.io/repos/github/physikerwelt/texvcinfo/badge.svg?branch=master)](https://coveralls.io/github/physikerwelt/texvcinfo?branch=master)
-[![bitHound Overall Score](https://www.bithound.io/github/physikerwelt/texvcinfo/badges/score.svg)](https://www.bithound.io/github/physikerwelt/texvcinfo)
 [![Code Climate](https://codeclimate.com/github/physikerwelt/texvcinfo/badges/gpa.svg)](https://codeclimate.com/github/physikerwelt/texvcinfo)
 
 Prints the texvc tokens identified by texvcjs.
