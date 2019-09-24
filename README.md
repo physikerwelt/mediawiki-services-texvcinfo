@@ -2,7 +2,6 @@
 [![npm version](https://badge.fury.io/js/texvcinfo.svg)](http://badge.fury.io/js/texvcinfo)
 [![Build Status][1]][2]
 [![Coverage Status](https://coveralls.io/repos/github/wikimedia/texvcinfo/badge.svg?branch=master)](https://coveralls.io/github/wikimedia/texvcinfo?branch=master)
-[![Code Climate](https://codeclimate.com/github/physikerwelt/texvcinfo/badges/gpa.svg)](https://codeclimate.com/github/physikerwelt/texvcinfo)
 
 Prints the texvc tokens identified by texvcjs.
 Moreover, texvcinfo provides additional information on the input such as
