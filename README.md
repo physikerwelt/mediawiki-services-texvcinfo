@@ -81,5 +81,5 @@ Copyright (c) 2015 Moritz Schubotz, C. Scott Ananian
 Licensed under GPLv2.
 
 
-[1]: https://travis-ci.org/physikerwelt/texvcinfo.svg?branch=master
-[2]: https://travis-ci.org/physikerwelt/texvcinfo?branch=master
+[1]: https://travis-ci.org/wikimedia/texvcinfo.svg?branch=master
+[2]: https://travis-ci.org/wikimedia/texvcinfo?branch=master
