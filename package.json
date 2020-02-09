@@ -1,6 +1,6 @@
 {
   "name": "texvcinfo",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "Extracts information from texvc code.",
   "main": "lib/index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "commander": "^3.0.1",
-    "mathoid-texvcjs": "^0.3.7"
+    "mathoid-texvcjs": "^0.3.8"
   },
   "devDependencies": {
     "coveralls": "^3.0.6",
