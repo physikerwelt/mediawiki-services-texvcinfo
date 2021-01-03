@@ -1,43 +1,43 @@
 {
-  "name": "texvcinfo",
-  "version": "0.5.6",
-  "description": "Extracts information from texvc code.",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "jshint . && mocha",
-    "coverage": "istanbul cover _mocha -- -R spec",
-    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls",
-    "coverage-win": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/physikerwelt/texvcinfo"
-  },
-  "keywords": [
-    "tex",
-    "wikitext",
-    "mediawiki",
-    "texvc",
-    "tokens",
-    "identifier"
-  ],
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/physikerwelt/texvcinfo/issues"
-  },
-  "dependencies": {
-    "commander": "^6.1.0",
-    "mathoid-texvcjs": "^0.3.10"
-  },
-  "devDependencies": {
-    "coveralls": "^3.1.0",
-    "eslint": "^7.9.0",
-    "istanbul": "^0.4.5",
-    "jshint": "^2.12.0",
-    "mocha": "^8.1.3",
-    "mocha-lcov-reporter": "^1.3.0"
-  },
-  "bin": {
-    "texvcinfo": "./bin/texvcinfo"
-  }
+	"name": "texvcinfo",
+	"version": "0.5.6",
+	"description": "Extracts information from texvc code.",
+	"main": "lib/index.js",
+	"scripts": {
+		"test": "jshint . && mocha",
+		"coverage": "istanbul cover _mocha -- -R spec",
+		"coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls",
+		"coverage-win": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/physikerwelt/texvcinfo"
+	},
+	"keywords": [
+		"tex",
+		"wikitext",
+		"mediawiki",
+		"texvc",
+		"tokens",
+		"identifier"
+	],
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/physikerwelt/texvcinfo/issues"
+	},
+	"dependencies": {
+		"commander": "^6.1.0",
+		"mathoid-texvcjs": "^0.3.10"
+	},
+	"devDependencies": {
+		"coveralls": "^3.1.0",
+		"eslint": "7.16.0",
+		"istanbul": "^0.4.5",
+		"jshint": "^2.12.0",
+		"mocha": "^8.1.3",
+		"mocha-lcov-reporter": "^1.3.0"
+	},
+	"bin": {
+		"texvcinfo": "./bin/texvcinfo"
+	}
 }
