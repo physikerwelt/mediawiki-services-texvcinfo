@@ -1,5 +1,4 @@
 node_modules
-coverage
 
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
@@ -192,3 +191,6 @@ sympy-plots-for-*.tex/
 *.bak
 *.sav
 
+# nyc
+coverage
+.nyc_output
