@@ -154,7 +154,11 @@ var testcases = [
         in:"\\mathbb{\\ce{H2O}}", out:[]
     }, {
         in:"\\ce{\\underbrace{a}_{b}}",out:[]
-    }
+    },
+    {in: "\\phantom{a}", out:[]},
+    {in: "\\hphantom{a}", out:[]},
+    {in: "\\vphantom{a}", out:[]}
+
     //{in: "\\reals", out:["\\reals"]},
     //{in: "\\mathrm {MTF}_{display}(\\xi,\\eta)", out: ["\\mathrm{MTF}_{display}", "\\xi", "\\eta"]}
 ];

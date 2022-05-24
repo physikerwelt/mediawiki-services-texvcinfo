@@ -1,6 +1,6 @@
 {
 	"name": "texvcinfo",
-	"version": "0.5.6",
+	"version": "0.5.7",
 	"description": "Extracts information from texvc code.",
 	"main": "lib/index.js",
 	"scripts": {
@@ -25,8 +25,8 @@
 		"url": "https://github.com/physikerwelt/texvcinfo/issues"
 	},
 	"dependencies": {
-		"commander": "^6.1.0",
-		"mathoid-texvcjs": "^0.3.10"
+		"commander": "^9.2.0",
+		"mathoid-texvcjs": "^0.3.12"
 	},
 	"devDependencies": {
 		"eslint": "8.9.0",
